@@ -31,6 +31,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "tickets.apps.TicketsConfig",
+    "rest_framework",
+
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -121,3 +124,17 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+REST_FRAMEWORK = {
+    # 'DEFAULT_AUTHENTICATION_CLASSES': [
+    #     'rest_framework.authentication.BasicAuthentication',  # the most basic authentication, using username and
+    #     # password
+    # ],
+    # 'DEFAULT_PERMISSION_CLASSES': [
+    #     # 4 types of permissions : 1. AllowAny -> everyone can access the API and do wherever he wants 2.
+    #     # IsAuthenticated -> only authenticated users can access the API 3. IsAdminUser -> only admin users can
+    #     # access the API 4. IsAuthenticatedOrReadOnly -> authenticated users can do whatever they want,
+    #     # but non-authenticated users can only read the API
+    #     'rest_framework.permissions.IsAuthenticated',
+    # ],
+}
